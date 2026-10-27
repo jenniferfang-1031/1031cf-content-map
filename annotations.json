@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-10-27T15:35:30.626Z",
+ "updated": "2026-10-27T17:13:32.224Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -957,6 +957,24 @@
    "url": "",
    "oldurl": "/upreit-vs-downreit/",
    "lastpub": "2023-12-25"
+  },
+  {
+   "id": "6d1c9020-8ff1-4f27-b566-48b0a9b29e94",
+   "created": "2026-10-27T17:13:32.224Z",
+   "u": "2026-10-27T17:13:32.224Z",
+   "bucket": "idea",
+   "date": "",
+   "status": "",
+   "types": [],
+   "topic": "Senior Housing Q3 Occupany",
+   "kw": "",
+   "vol": "",
+   "kd": "",
+   "prompts": "",
+   "gdoc": "",
+   "url": "",
+   "oldurl": "",
+   "lastpub": ""
   }
  ],
  "calDel": [
