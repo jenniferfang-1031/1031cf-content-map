@@ -426,6 +426,20 @@
    "kw": "1031 exchange news",
    "vol": 480,
    "note": "Dated policy commentary. Both Biden budget posts now 301 to the education-center guide. Consider one evergreen \"1031 legislative outlook\" page refreshed in place."
+  },
+  {
+   "topic": "1031 exchange holding period",
+   "cat": "1031 Exchange Rules",
+   "keep": "/what-is-a-holding-period/",
+   "urls": [
+    "/what-is-a-holding-period/",
+    "/1031-exchange-2-year-rule/",
+    "/education-center/dst-1031-exchange/",
+    "/featured-video-1031-exchanges-rules-and-timelines/"
+   ],
+   "kw": "1031 exchange holding period",
+   "vol": 0,
+   "note": "Added 2026-09-21 from GSC. Four live pages split the holding-period head term and its variants (\"1031 exchange holding period\" 778 imps, \"holding period for 1031 exchange\" 392, \"1031 holding period\" 388) and the family earns ZERO clicks. Best position on the head term is 32 and it belongs to /education-center/dst-1031-exchange/, not to the dedicated page \u2014 the same wrong-page-wins pattern already flagged on timeline and deadlines. /what-is-a-1031-exchange-holding-period-part-2/ was already 301'd into /what-is-a-holding-period/, so the canonical choice is hers and established; this group records the three pages still competing with it. Fix is differentiation, not a merge: trim the DST hub's and the video page's holding-period sections and link to the keep page. /5-year-holding-rule-1031-exchanges/ is deliberately NOT in this group \u2014 it surfaces on primary-residence queries and is already covered by group 12."
   }
  ],
  "slug_fixes": [
