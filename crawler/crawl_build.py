@@ -96,6 +96,7 @@ TRANSACTIONAL = {
     "/1031-exchange-properties/": "1031 Exchange",
     "/education-center/1031-crowdfunding-scenarios/": "1031 Exchange",
     "/delaware-statutory-trusts/": "DST",
+    "/dst-properties/": "DST",  # new Sep 3; /delaware-statutory-trusts/ 301s here
     "/1031cf-portfolio-4-dst/": "DST", "/1031cf-portfolio-5-dst/": "DST",
     "/721-acquisition/": "721 Exchange", "/721-exchange-real-estate-investing/": "721 Exchange",
     "/real-estate-investment-trusts/": "REIT",
@@ -104,6 +105,7 @@ TRANSACTIONAL = {
     "/invest-with-an-ira/": "Retirement & IRA",
     "/invest-in-alternatives/": "Real Estate Investment",
     "/investment-platform/": "Company", "/register/": "Company", "/contactus/": "Company",
+    "/senior-housing-investing/": "Asset Classes",   # her re-tier 9/03 in the app
     "/portfolio/aspen-valley-senior-living-2/": "Asset Classes",
     "/portfolio/iris-memory-care-of-edmond/": "Asset Classes",
     "/portfolio/iris-memory-care-of-rowlett/": "Asset Classes",
@@ -159,7 +161,7 @@ PRESS = re.compile(
     r"edward-fernandez|ed-fernandez|ceo-of-1031|with-ed-fernandez|ft-ed-fernandez|"
     r"marketwatch|kiplinger|forbes|globest|investmentnews|benzinga|yield-talk|"
     r"inc-5000|inc-pacific|regionals-2023|inc-s-2022|inc-magazines|wsr-pathfinder|"
-    r"td-ameritrade|nasaq-tradetalks|newswatch|boroughs-burbs|best-ever-cre|"
+    r"td-ameritrade|nasd?aq-tradetalks|newswatch|boroughs-burbs|best-ever-cre|"
     r"audra-lambert|deal-scout|wealthchannel|money-talks-news|"
     r"what-financial-advisors-need|harnessing-the-power-of-1031-exchanges|"
     r"a-smart-spin-on-1031|1031cf-bridge-fund-iii-distributes|"
@@ -167,7 +169,7 @@ PRESS = re.compile(
 VIDEO = re.compile(r"^/(featured-video-|youtube-)")
 COMPANY_MISC = re.compile(
     r"great-leader|stay-humble|quick-wins|build-the-right-culture|find-a-mentor|"
-    r"calculated-risks|keep-pace-and-grow|why-partnering-with-a-cpa")
+    r"calculated-risks|keep-pace-and-grow")
 RULES = [
     (r"721|upreit|downreit|operating-partnership", "721 Exchange"),
     (r"\bdst|delaware-statutory|dsts-", "DST"),
