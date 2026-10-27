@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-10-27T17:14:34.621Z",
+ "updated": "2026-10-27T17:15:49.405Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -961,7 +961,7 @@
   {
    "id": "6d1c9020-8ff1-4f27-b566-48b0a9b29e94",
    "created": "2026-10-27T17:13:32.224Z",
-   "u": "2026-10-27T17:14:34.620Z",
+   "u": "2026-10-27T17:15:49.405Z",
    "bucket": "sched",
    "date": "2026-11-02",
    "status": "draft",
@@ -970,9 +970,9 @@
    ],
    "topic": "Senior Housing Q3 Occupany",
    "kw": "senior housing occupancy",
-   "vol": "",
-   "kd": "",
-   "prompts": "",
+   "vol": 70,
+   "kd": 36,
+   "prompts": "Why Is Senior Housing Occupancy Rising?\nWhat Does Rising Senior Housing Occupancy Mean for Investors?",
    "gdoc": "https://docs.google.com/document/d/1BAUriJRalXDjJ3L2P2Yq3O7WzZJNlG8zZMXr9PCkvMk/edit?tab=t.sll08ryuw78",
    "url": "",
    "oldurl": "",
