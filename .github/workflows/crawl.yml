@@ -1,8 +1,10 @@
 name: Site crawl & rebuild
 on:
   workflow_dispatch: {}        # triggered by the app's Refresh button (or the Run workflow button here)
-  schedule:
-    - cron: '0 13 * * *'       # daily, 6am PT
+  # Daily schedule removed 2026-10-27 at Jennifer's request — restore the block
+  # below once the site host allowlists the crawler User-Agent:
+  # schedule:
+  #   - cron: '0 13 * * *'     # daily, 6am PT
 concurrency:
   group: crawl
   cancel-in-progress: false
