@@ -300,7 +300,7 @@ async function pollForBuild(sinceStamp) {
 }
 
 /* ============================== boot ============================== */
-let TAB = 'map';
+let TAB = 'cal';
 const FILTER = { q:'', cluster:'', tier:'', status:'', label:'', notes:'', compact:false };
 async function boot() {
   await Store.open();
@@ -344,11 +344,10 @@ function daysAgo(iso) { if (!iso) return 999; return Math.floor((Date.now() - ne
 function updateChips() {
   $('#chip-data').textContent = 'Data as of ' + (DATA.stats.generated || '—');
   if (DATA.stats.partial) $('#chip-data').classList.add('amber');
-  const at = Object.values(ANN.live).map(v => v.at).sort().pop() || DATA.stats.crawl_date + 'T00:00:00Z';
-  const d = daysAgo(at);
   const el = $('#chip-redir');
-  el.textContent = 'Redirects checked ' + (d <= 0 ? 'today' : d + 'd ago');
-  el.classList.toggle('amber', d > 7);
+  const cd = DATA.stats.crawl_date || '—';
+  el.textContent = 'Redirects verified by crawl ' + cd;
+  el.classList.toggle('amber', daysAgo(cd + 'T00:00:00Z') > 14);
 }
 async function doRefresh() {
   const b = $('#btn-refresh'); b.classList.add('spin'); b.disabled = true;
@@ -386,7 +385,8 @@ async function doRefresh() {
 /* ============================== chrome: tabs, toast, tooltip ============================== */
 function calEntries() { return (ANN.cal || []).filter(e => !(ANN.calDel || []).includes(e.id)); }
 function renderTabs() {
-  const t = [['map','Topic map'],['cal','Editorial calendar'],['pages','All pages'],['insights','Audit insights'],['gsc','GSC overlaps'],['redirects','Redirects'],['notes','My notes']];
+  const t = [['cal','Editorial calendar'],['map','Topic map'],['insights','Audit insights'],['gsc','GSC overlaps'],['redirects','Redirects']];
+  if (!t.some(([id]) => id === TAB)) TAB = 'cal';
   $('#tabs').innerHTML = t.map(([id, name]) => {
     let n = '';
     if (id === 'insights') n = '<span class="n">' + DATA.insights.filter(i => ['critical','serious'].includes(i.sev)).length + '</span>';
@@ -1180,7 +1180,7 @@ function viewGsc() {
   let html = '<p class="intro">Search Console, joined to your clusters: every query where two or more of your pages earn impressions (last ~90 days). Once connected, <b>every Refresh click re-pulls this automatically</b> — page metrics feed the whole app (Topic map, All pages, tooltips), URL Inspection re-verifies redirect status, and the result publishes to the repo for the weekly report.</p>';
   if (!GSC.cfg || !GSC.cfg.clientId) {
     return html + '<div class="group" style="max-width:640px"><h4>One-time setup</h4>' +
-      '<p style="font-size:13px;color:var(--muted)">Follow <b>GSC-SETUP.md</b> (in the repo): create a Google Cloud OAuth client for <code>jennf000.github.io</code>, enable the Search Console API, then paste the client ID here. No keys or passwords — you approve read-only access in a Google popup each session.</p>' +
+      '<p style="font-size:13px;color:var(--muted)">Follow <b>GSC-SETUP.md</b> (in the repo): create a Google Cloud OAuth client whose authorized JavaScript origin is this site (<code>' + location.origin + '</code>), enable the Search Console API, then paste the client ID here. No keys or passwords — you approve read-only access in a Google popup each session.</p>' +
       '<div class="addc" style="margin-top:8px"><input type="text" id="gsc-cid" placeholder="1234567890-abc123.apps.googleusercontent.com"><button class="btn" id="gsc-savecid">Save</button></div>' +
       '</div>';
   }
