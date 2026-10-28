@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-10-28T23:44:17.618Z",
+ "updated": "2026-10-28T23:54:31.973Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -961,10 +961,10 @@
   {
    "id": "6d1c9020-8ff1-4f27-b566-48b0a9b29e94",
    "created": "2026-10-27T17:13:32.224Z",
-   "u": "2026-10-28T23:44:17.617Z",
+   "u": "2026-10-28T23:54:31.973Z",
    "bucket": "sched",
    "date": "2026-11-02",
-   "status": "draft",
+   "status": "queue",
    "types": [
     "new"
    ],
