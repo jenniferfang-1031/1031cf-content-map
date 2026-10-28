@@ -394,7 +394,7 @@ def main():
     v['data'] = STAMP
     json.dump(v, open(os.path.join(ROOT, 'version.json'), 'w'))
     print('OK: %d live, %d redirects (%d×302), %d gone, %d noindex, %d new pages' %
-          (len(live_pages), len(redir_rows), len(t302), len(gone), len(newp)))
+          (len(live_pages), len(redir_rows), len(t302), len(gone), len(noindex), len(newp)))
 
 if __name__ == '__main__':
     main()
