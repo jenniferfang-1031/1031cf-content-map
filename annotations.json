@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-10-27T17:15:49.405Z",
+ "updated": "2026-10-28T23:44:17.618Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -700,7 +700,7 @@
   {
    "id": "b33b9da3-b4a8-41fc-8e45-ad61c502b9e0",
    "created": "2026-08-24T21:30:00.000Z",
-   "u": "2026-09-04T18:46:37.930Z",
+   "u": "2026-10-27T17:16:01.832Z",
    "bucket": "sched",
    "date": "2026-07-06",
    "status": "published",
@@ -941,7 +941,7 @@
   {
    "id": "e776a00d-6c28-496e-b0e7-f2dfd6748f95",
    "created": "2026-10-02T19:19:47.213Z",
-   "u": "2026-10-16T16:20:53.380Z",
+   "u": "2026-10-27T17:16:42.325Z",
    "bucket": "sched",
    "date": "2026-10-19",
    "status": "published",
@@ -954,14 +954,14 @@
    "kd": 10,
    "prompts": "What is a DownREIT?\nWhich Is Better, an UPREIT or a DownREIT?",
    "gdoc": "https://docs.google.com/document/d/1bjwsBxmn6R6t_w0xpRrLDQxSTtBbXCuIXYBlT4CyUGg/edit?tab=t.nnboipwysoeu",
-   "url": "",
+   "url": "/upreit-vs-downreit/",
    "oldurl": "/upreit-vs-downreit/",
    "lastpub": "2023-12-25"
   },
   {
    "id": "6d1c9020-8ff1-4f27-b566-48b0a9b29e94",
    "created": "2026-10-27T17:13:32.224Z",
-   "u": "2026-10-27T17:15:49.405Z",
+   "u": "2026-10-28T23:44:17.617Z",
    "bucket": "sched",
    "date": "2026-11-02",
    "status": "draft",
@@ -974,7 +974,7 @@
    "kd": 36,
    "prompts": "Why Is Senior Housing Occupancy Rising?\nWhat Does Rising Senior Housing Occupancy Mean for Investors?",
    "gdoc": "https://docs.google.com/document/d/1BAUriJRalXDjJ3L2P2Yq3O7WzZJNlG8zZMXr9PCkvMk/edit?tab=t.sll08ryuw78",
-   "url": "",
+   "url": "/senior-housing-occupancy/",
    "oldurl": "",
    "lastpub": ""
   }
