@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-02T18:13:53.465Z",
+ "updated": "2026-11-02T23:28:22.198Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -652,6 +652,20 @@
    "cluster": "",
    "tier": "",
    "offFlags": []
+  },
+  "/upreit-vs-downreit/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "status": "2026-11-02T23:28:22.198Z"
+   },
+   "status": "published",
+   "labels": [],
+   "target": "",
+   "cluster": "",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-02T23:28:22.198Z"
   }
  },
  "live": {
