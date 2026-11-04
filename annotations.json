@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T18:15:55.390Z",
+ "updated": "2026-11-04T19:36:10.014Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -165,15 +165,18 @@
   "eeat",
   "priority",
   "keep",
-  "refresh"
+  "refresh",
+  "rewrite",
+  "needs301"
  ],
- "hiddenAt": "2026-08-27T23:26:56.405Z",
+ "hiddenAt": "2026-11-04T18:16:28.164Z",
  "hiddenS": [
   "blocked",
   "wontdo",
-  "inprogress"
+  "inprogress",
+  "monitoring"
  ],
- "hiddenSAt": "2026-08-23T20:16:35.073Z",
+ "hiddenSAt": "2026-11-04T18:16:12.130Z",
  "pages": {
   "/delaware-statutory-trust-pros-and-cons/": {
    "comments": [
@@ -673,13 +676,27 @@
    "f": {
     "status": "2026-11-04T18:15:50.874Z"
    },
+   "updated": "2026-11-04T18:15:50.874Z",
+   "status": "published",
+   "labels": [],
+   "target": "",
+   "cluster": "",
+   "tier": "",
+   "offFlags": []
+  },
+  "/education-center/1031-exchange-timeline/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "status": "2026-11-04T19:36:10.014Z"
+   },
    "status": "published",
    "labels": [],
    "target": "",
    "cluster": "",
    "tier": "",
    "offFlags": [],
-   "updated": "2026-11-04T18:15:50.874Z"
+   "updated": "2026-11-04T19:36:10.014Z"
   }
  },
  "live": {
