@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T19:37:19.677Z",
+ "updated": "2026-11-04T19:41:49.058Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -697,6 +697,90 @@
    "cluster": "",
    "tier": "",
    "offFlags": []
+  },
+  "/glossary-taxonomy/0-9/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "cluster": "2026-11-04T19:37:47.598Z"
+   },
+   "status": "",
+   "labels": [],
+   "target": "",
+   "cluster": "Company",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T19:37:47.598Z"
+  },
+  "/glossary-taxonomy/a-e/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "cluster": "2026-11-04T19:37:53.391Z"
+   },
+   "status": "",
+   "labels": [],
+   "target": "",
+   "cluster": "Company",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T19:37:53.391Z"
+  },
+  "/glossary-taxonomy/f-j/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "cluster": "2026-11-04T19:37:57.781Z"
+   },
+   "status": "",
+   "labels": [],
+   "target": "",
+   "cluster": "Company",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T19:37:57.781Z"
+  },
+  "/glossary-taxonomy/k-o/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "cluster": "2026-11-04T19:38:02.204Z"
+   },
+   "status": "",
+   "labels": [],
+   "target": "",
+   "cluster": "Company",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T19:38:02.204Z"
+  },
+  "/glossary-taxonomy/p-s/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "cluster": "2026-11-04T19:38:05.715Z"
+   },
+   "status": "",
+   "labels": [],
+   "target": "",
+   "cluster": "Company",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T19:38:05.715Z"
+  },
+  "/glossary-taxonomy/t-z/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "cluster": "2026-11-04T19:38:09.973Z"
+   },
+   "status": "",
+   "labels": [],
+   "target": "",
+   "cluster": "Company",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T19:38:09.973Z"
   }
  },
  "live": {
@@ -1022,6 +1106,28 @@
    "url": "/senior-housing-occupancy/",
    "oldurl": "",
    "lastpub": ""
+  },
+  {
+   "id": "b9958d70-41dc-47cd-afb6-b93dccbf44c4",
+   "created": "2026-11-04T19:41:49.058Z",
+   "u": "2026-11-04T19:41:49.058Z",
+   "bucket": "sched",
+   "kind": "page",
+   "date": "2026-11-04",
+   "status": "published",
+   "types": [
+    "rewrite",
+    "consolidate"
+   ],
+   "topic": "1031 exchange timeline & ID rules",
+   "kw": "1031 exchange timeline",
+   "vol": 1900,
+   "kd": 25,
+   "prompts": "What Is the 1031 Exchange Timeline?",
+   "gdoc": "https://docs.google.com/document/d/1yPWM26I9hvaRb1rgz1TNf5c4c6E6Cb54cOwKEm1ldz4/edit?tab=t.mzve5l9kfzb1",
+   "url": "/education-center/1031-exchange-timeline/",
+   "oldurl": "/education-center/dst-1031-exchange/",
+   "lastpub": "2022-06-06"
   }
  ],
  "calDel": [
