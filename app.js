@@ -503,8 +503,7 @@ function toolbarHTML() {   // Topic map only
     '<select id="f-tier">' + tierOpts(FILTER.tier) + '</select>' +
     '<select id="f-status">' + statusOpts(FILTER.status) + '</select>' +
     '<select id="f-label">' + labelOpts(FILTER.label) + '</select>' +
-    '<select id="f-notes"><option value="">Everything</option><option value="any" ' + (FILTER.notes === 'any' ? 'selected' : '') + '>Any of my notes</option><option value="comments" ' + (FILTER.notes === 'comments' ? 'selected' : '') + '>Has comments</option><option value="moved" ' + (FILTER.notes === 'moved' ? 'selected' : '') + '>Pages I moved / re-checked</option><option value="nodata" ' + (FILTER.notes === 'nodata' ? 'selected' : '') + '>No data yet</option></select>' +
-    '<label class="tog"><input type="checkbox" id="f-compact" ' + (FILTER.compact ? 'checked' : '') + '> Compact</label>' +
+
     '<span class="count" id="f-count"></span></div>';
 }
 function pagesToolbar() {  // All pages — independent state
@@ -808,7 +807,8 @@ function viewNotes() {
 }
 
 /* ============================== editorial calendar ============================== */
-const CALF = { q:'', status:'', type:'' };
+const CALF = { q:'', status:'', type:'', kind:'blog' };
+const calKind = e => e.kind === 'page' ? 'page' : 'blog';
 const linkA = (u, text) => {
   if (!u) return '—';
   const href = /^https?:\/\//i.test(u) ? u : (u.startsWith('/') ? 'https://www.1031crowdfunding.com' + u : '');
@@ -826,7 +826,7 @@ const fmtDate = d => {
 };
 const isIdea = e => e.bucket === 'idea';
 function viewCal() {
-  let all = calEntries();
+  let all = calEntries().filter(e => calKind(e) === CALF.kind);
   if ((CALF.q || '').trim()) { const q = CALF.q.trim().toLowerCase(); all = all.filter(e => ((e.topic||'') + ' ' + (e.kw||'') + ' ' + (e.url||'') + ' ' + (e.oldurl||'') + ' ' + (e.prompts||'')).toLowerCase().includes(q)); }
   if (CALF.type) all = all.filter(e => (e.types || []).includes(CALF.type));
   let ideas = all.filter(isIdea);
@@ -875,7 +875,11 @@ function viewCal() {
       (e.prompts ? '<div class="mini">' + esc(e.prompts.length > 120 ? e.prompts.slice(0, 120) + '…' : e.prompts) + '</div>' : '') +
       (olds ? '<div class="mini">Old: ' + olds + '</div>' : '') + '</div>';
   }).join('');
-  return '<p class="intro">Plan pieces here; each row is fully editable (click it). Entries live in your notes file, so they sync across devices and survive data refreshes. <b>' + calEntries().filter(e => !isIdea(e)).length + '</b> scheduled · <b>' + calEntries().filter(isIdea).length + '</b> ideas.</p>' +
+  const nB = calEntries().filter(e => calKind(e) === 'blog').length, nP = calEntries().filter(e => calKind(e) === 'page').length;
+  return '<div class="subtabs">' +
+    '<button data-ck="blog" class="' + (CALF.kind === 'blog' ? 'on' : '') + '">Blogs<span class="n">' + nB + '</span></button>' +
+    '<button data-ck="page" class="' + (CALF.kind === 'page' ? 'on' : '') + '">Pages<span class="n">' + nP + '</span></button></div>' +
+    '<p class="intro">' + (CALF.kind === 'page' ? 'Page updates — rewrites, consolidations and new landing/education-center pages. ' : 'Blog posts and articles. ') + 'Each row is fully editable (click it). Entries live in your notes file, so they sync across devices and survive data refreshes. <b>' + all.filter(e => !isIdea(e)).length + '</b> scheduled · <b>' + all.filter(isIdea).length + '</b> ideas.</p>' +
     '<div class="toolbar">' +
     '<button class="btn" id="cal-new">+ New entry</button>' +
     '<input type="search" id="cal-q" placeholder="Search topic, keyword, URL…" value="' + esc(CALF.q) + '">' +
@@ -892,7 +896,8 @@ function viewCal() {
 }
 function calEditor(id, opts) {
   const existing = id ? calEntries().find(e => e.id === id) : null;
-  const e = existing || { id: uuid(), bucket:'sched', date:'', status:'outline', types:[], topic:'', kw:'', vol:'', kd:'', prompts:'', gdoc:'', url:'', oldurl:'', lastpub:'' };
+  const e = existing || { id: uuid(), bucket:'sched', kind: CALF.kind, date:'', status:'outline', types:[], topic:'', kw:'', vol:'', kd:'', prompts:'', gdoc:'', url:'', oldurl:'', lastpub:'' };
+  const kind0 = calKind(e);
   const bucket0 = (opts && opts.promote) ? 'sched' : (e.bucket === 'idea' ? 'idea' : 'sched');
   const fld = (label, inner) => '<div class="sec" style="margin-bottom:11px"><h5>' + label + '</h5>' + inner + '</div>';
   const ti = (fid, val, ph) => '<input type="text" id="' + fid + '" value="' + esc(val || '') + '" placeholder="' + esc(ph || '') + '" style="width:100%;padding:7px 10px;border:1px solid var(--line);border-radius:4px;font:inherit">';
@@ -900,6 +905,9 @@ function calEditor(id, opts) {
     fld('Where does this live?', '<div class="pillrow">' +
       '<span class="apill mine ' + (bucket0 === 'idea' ? '' : 'off') + '" data-bk="idea" style="background:' + colorOf('slate') + '">Idea</span>' +
       '<span class="apill mine ' + (bucket0 === 'sched' ? '' : 'off') + '" data-bk="sched" style="background:' + colorOf('green') + '">Scheduled</span></div>') +
+    fld('Type of entry', '<div class="pillrow">' +
+      '<span class="apill mine ' + (kind0 === 'blog' ? '' : 'off') + '" data-ck="blog" style="background:' + colorOf('blue') + '">Blog</span>' +
+      '<span class="apill mine ' + (kind0 === 'page' ? '' : 'off') + '" data-ck="page" style="background:' + colorOf('teal') + '">Page</span></div>') +
     '<div class="row2">' +
       '<div style="flex:1">' + fld('Publish date', '<input type="date" id="c-date" value="' + esc(e.date || '') + '" style="width:100%;padding:6px 10px;border:1px solid var(--line);border-radius:4px;font:inherit">') + '</div>' +
       '<div style="flex:1">' + fld('Status', '<select id="c-status" style="width:100%;padding:7px 8px;border:1px solid var(--line);border-radius:4px;font:inherit;background:#fff"><option value="">—</option>' + CAL_STATUSES.map(s => '<option value="' + s[0] + '" ' + (e.status === s[0] ? 'selected' : '') + '>' + s[1] + '</option>').join('') + '</select>') + '</div>' +
@@ -918,6 +926,7 @@ function calEditor(id, opts) {
     fld('Last publish date (of the old post)', '<input type="date" id="c-lastpub" value="' + esc(e.lastpub || '') + '" style="width:100%;padding:6px 10px;border:1px solid var(--line);border-radius:4px;font:inherit">') +
     '<div class="foot">' + (existing ? '<button class="btn danger" id="c-del">Delete</button>' : '') + '<button class="btn sub" id="c-cancel">Cancel</button><button class="btn" id="c-save">Save</button></div>');
   $$('[data-ct]', m).forEach(el => el.addEventListener('click', () => el.classList.toggle('off')));
+  $$('[data-ck]', m).forEach(el => el.addEventListener('click', () => { $$('[data-ck]', m).forEach(x => x.classList.add('off')); el.classList.remove('off'); }));
   $$('[data-bk]', m).forEach(el => el.addEventListener('click', () => {
     $$('[data-bk]', m).forEach(x => x.classList.add('off'));
     el.classList.remove('off');
@@ -944,6 +953,7 @@ function calEditor(id, opts) {
     const bk = ($$('[data-bk]', m).find(x => !x.classList.contains('off')) || {}).dataset;
     const upd = { id: e.id, created: e.created || nowISO(), u: nowISO(),
       bucket: (bk && bk.bk) === 'idea' ? 'idea' : 'sched',
+      kind: (($$('[data-ck]', m).find(x => !x.classList.contains('off')) || {}).dataset || {}).ck === 'page' ? 'page' : 'blog',
       date: $('#c-date', m).value, status: $('#c-status', m).value,
       types: $$('[data-ct]', m).filter(x => !x.classList.contains('off')).map(x => x.dataset.ct),
       topic: $('#c-topic', m).value.trim(), kw: $('#c-kw', m).value.trim(),
@@ -1251,6 +1261,7 @@ function wire(root) {
   const csv = $('#btn-csv', root); csv && csv.addEventListener('click', exportCSV);
   const libs = $('#btn-libs', root); libs && libs.addEventListener('click', libraryModal);
   const cn = $('#cal-new', root); cn && cn.addEventListener('click', () => calEditor(null));
+  $$('[data-ck]', root).forEach(b => b.addEventListener('click', () => { CALF.kind = b.dataset.ck; redraw(); }));
   const cq = $('#cal-q', root);
   if (cq) {
     cq.addEventListener('input', debounce(() => { CALF.q = cq.value; redrawKeepFocus('cal-q'); }, 220));
@@ -1278,7 +1289,7 @@ function wire(root) {
   if (ia) {
     const addIdea = () => {
       const inp = $('#idea-new', root); const v = inp.value.trim(); if (!v) return;
-      ANN.cal.push({ id: uuid(), created: nowISO(), u: nowISO(), bucket: 'idea', date: '', status: '',
+      ANN.cal.push({ id: uuid(), created: nowISO(), u: nowISO(), bucket: 'idea', kind: CALF.kind, date: '', status: '',
         types: [], topic: v, kw: '', vol: '', kd: '', prompts: '', gdoc: '', url: '', oldurl: '', lastpub: '' });
       annChanged();
     };
