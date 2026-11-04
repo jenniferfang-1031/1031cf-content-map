@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T19:55:45.173Z",
+ "updated": "2026-11-04T19:56:58.327Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -1174,21 +1174,24 @@
   {
    "id": "d7774846-9b32-4858-8b14-345686dc17dc",
    "created": "2026-11-04T19:55:45.173Z",
-   "u": "2026-11-04T19:55:45.173Z",
+   "u": "2026-11-04T19:56:58.326Z",
    "bucket": "idea",
    "kind": "page",
    "date": "",
    "status": "",
-   "types": [],
+   "types": [
+    "rewrite",
+    "consolidate"
+   ],
    "topic": "Multifamily Investing",
    "kw": "",
    "vol": "",
    "kd": "",
    "prompts": "",
-   "gdoc": "",
+   "gdoc": "https://docs.google.com/document/d/15A1LqD2ujdMQwIRAy4fZBegwa-bvncFVVqhDZ97jt-Y/edit?tab=t.0",
    "url": "",
-   "oldurl": "",
-   "lastpub": ""
+   "oldurl": "/education-center/multifamily-properties/",
+   "lastpub": "2022-08-12"
   }
  ],
  "calDel": [
