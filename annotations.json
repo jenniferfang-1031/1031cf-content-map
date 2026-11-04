@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T18:14:56.288Z",
+ "updated": "2026-11-04T18:15:55.390Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -303,10 +303,10 @@
    "comments": [],
    "delc": [],
    "f": {
-    "status": "2026-11-04T18:14:56.288Z"
+    "status": "2026-11-04T18:14:58.447Z"
    },
-   "updated": "2026-11-04T18:14:56.288Z",
-   "status": "todo",
+   "updated": "2026-11-04T18:14:58.447Z",
+   "status": "",
    "labels": [],
    "target": "",
    "cluster": "",
@@ -462,11 +462,11 @@
    "comments": [],
    "delc": [],
    "f": {
-    "status": "2026-09-01T05:52:46.078Z",
+    "status": "2026-11-04T18:15:55.390Z",
     "target": "2026-09-01T05:53:26.641Z"
    },
-   "updated": "2026-09-01T05:53:26.641Z",
-   "status": "published",
+   "updated": "2026-11-04T18:15:55.390Z",
+   "status": "",
    "labels": [],
    "target": "drop and swap 1031 exchange",
    "cluster": "",
@@ -666,6 +666,20 @@
    "cluster": "",
    "tier": "",
    "offFlags": []
+  },
+  "/drop-and-swap-1031-exchange/": {
+   "comments": [],
+   "delc": [],
+   "f": {
+    "status": "2026-11-04T18:15:50.874Z"
+   },
+   "status": "published",
+   "labels": [],
+   "target": "",
+   "cluster": "",
+   "tier": "",
+   "offFlags": [],
+   "updated": "2026-11-04T18:15:50.874Z"
   }
  },
  "live": {
