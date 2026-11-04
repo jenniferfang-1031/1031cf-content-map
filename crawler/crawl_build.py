@@ -116,6 +116,7 @@ PILLAR = {
     "/education-center/guide-to-1031-exchanges/": "1031 Exchange",
     "/1031-exchange-rules/": "1031 Exchange Rules",
     "/education-center/dst-1031-exchange/": "1031 Exchange Rules",
+    "/education-center/1031-exchange-timeline/": "1031 Exchange Rules",  # new Nov 2026; /1031-exchange-rules/ and the DST hub 301 here
     "/education-center/what-is-a-delaware-statutory-trust/": "DST",
     "/education-center/everything-you-should-know-about-upreits/": "721 Exchange",
     "/what-is-a-reit-and-how-does-it-work/": "REIT",
@@ -136,6 +137,7 @@ PILLAR = {
 }
 FORCE = {
     "/retirement-reit/": ("REIT", "fanout"),
+    "/press/": ("Press Mentions", "pillar"),   # press hub, new Nov 2026
     "/education-center/1031-exchange-services/": ("1031 Exchange", "fanout"),
     "/education-center/qofs-vs-dsts/": ("Opportunity Zones", "fanout"),
     "/": ("Company", "transactional"),

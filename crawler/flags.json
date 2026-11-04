@@ -115,8 +115,9 @@
   {
    "topic": "1031 identification rules",
    "cat": "1031 Exchange Rules",
-   "keep": "/1031-exchange-rules/",
+   "keep": "/education-center/1031-exchange-timeline/",
    "urls": [
+    "/education-center/1031-exchange-timeline/",
     "/1031-exchange-rules/",
     "/replacement-property-identification/",
     "/education-center/dst-1031-exchange/",
@@ -124,7 +125,7 @@
    ],
    "kw": "1031 exchange identification rules",
    "vol": 320,
-   "note": "Three-way split. The dedicated identification page ranks worse than the DST page that only mentions the rule."
+   "note": "Three-way split. The dedicated identification page ranks worse than the DST page that only mentions the rule. UPDATE 2026-11-04: the dedicated timeline/identification page shipped at /education-center/1031-exchange-timeline/ and /1031-exchange-rules/, the DST hub, /replacement-property-identification/ and the three-property-rule post all 301 into it \u2014 keep moved to the new page."
   },
   {
    "topic": "1031 deadlines / timeline",
@@ -135,11 +136,12 @@
     "/education-center/dst-1031-exchange/",
     "/1031-exchange-timing/",
     "/featured-video-1031-exchanges-rules-and-timelines/",
-    "/will-tax-day-cut-your-180-days-short-how-to-complete-a-1031-exchange/"
+    "/will-tax-day-cut-your-180-days-short-how-to-complete-a-1031-exchange/",
+    "/education-center/1031-exchange-timeline/"
    ],
    "kw": "1031 exchange timeline",
    "vol": 1900,
-   "note": "/education-center/dst-1031-exchange/ owns \"1031 exchange timeline\" (1,900) and outranks the dedicated deadlines page on timing queries."
+   "note": "/education-center/dst-1031-exchange/ owns \"1031 exchange timeline\" (1,900) and outranks the dedicated deadlines page on timing queries. 2026-11-04: new /education-center/1031-exchange-timeline/ page added to the group (it now owns the timeline/identification content; the DST hub that used to intercept these queries 301s into it). Keep left on /1031-deadlines-extensions/ pending her call."
   },
   {
    "topic": "1031 exchange beginner guide / basics",
