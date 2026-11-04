@@ -282,6 +282,11 @@ def main():
         g['still_live'] = sorted(u for u in g['urls'] if u in live and u != g['keep'])
         n = len(g['still_live'])
         g['sev'] = 'resolved' if n == 0 else ('partial' if (g['redirected'] or g['gone']) else ('critical' if n >= 4 else 'serious' if n >= 2 else 'warning'))
+    # 'consolidate' flag = still-live, non-keep member of an OPEN group (the keep page is the survivor, not a merge candidate)
+    merge_candidates = set()
+    for g in flags['consolidation_groups']:
+        if g['sev'] != 'resolved': merge_candidates.update(g['still_live'])
+    merge_candidates -= {g['keep'] for g in flags['consolidation_groups']}   # a keep anywhere is a survivor everywhere
 
     pages = []
     for p in sorted(set(live) | set(redirects)):
@@ -290,10 +295,12 @@ def main():
         m = prev_metrics.get(p)
         pflags = []
         if not is_r:
-            if p in dup_lookup: pflags.append('consolidate')
+            if p in merge_candidates: pflags.append('consolidate')
             if p in slug_lookup or re.search(r'-\d$|-part-\d$', p.rstrip('/')): pflags.append('slug')
-            if m and m.get('pos') and m['pos'] > 20 and (m.get('vol') or 0) >= 500: pflags.append('underperform')
-            if (not m or (m.get('kw') or 0) == 0) and page_type(p) not in ('Site page', 'Archive'): pflags.append('nokw')
+            # underperform only on a FRESH top keyword (a carried-forward one may be months old)
+            if m and m.get('pos') and m['pos'] > 20 and (m.get('vol') or 0) >= 500 and not m.get('pkw_stale'): pflags.append('underperform')
+            # nokw = a real measured zero; a page that has never been measured is 'newpage', not 'nokw'
+            if m is not None and (m.get('kw') or 0) == 0 and page_type(p) not in ('Site page', 'Archive'): pflags.append('nokw')
             if m is None: pflags.append('newpage')
         else:
             pflags = ['redirect']
