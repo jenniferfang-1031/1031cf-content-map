@@ -14,10 +14,11 @@
   --bg:#f9f9f7; --panel:#ffffff; --ink:#0b0b0b; --muted:#52514e; --faint:#898781;
   --line:#e1e0d9; --hair:rgba(11,11,11,.10);
   --navy:#1f4e79; --navy-soft:#eef2f6;
-  /* Jennifer's tier colors (11/05): band fills are her exact hexes. The *-bg fill is the band;
-     --trans/--pillar reuse it for dots and ticks, --fanout is a darker step of #B4C0EE so small marks still read. */
-  --trans-bg:#2C3147; --pillar-bg:#464E72; --fanout-bg:#B4C0EE; --redir-bg:#dedee1;
-  --trans:#2C3147; --pillar:#464E72; --fanout:#7483c4; --redir:#87878f;
+  /* Jennifer's tier colors (11/05): Transactional #464E72, Pillar #7D87B0 (midpoint of #464E72→#B4C0EE),
+     Fan-out #B4C0EE. The *-bg fill is the band; --trans/--pillar reuse it for dots and ticks,
+     --fanout is a darker step of #B4C0EE so small marks still read. */
+  --trans-bg:#464E72; --pillar-bg:#7D87B0; --fanout-bg:#B4C0EE; --redir-bg:#dedee1;
+  --trans:#464E72; --pillar:#7D87B0; --fanout:#7483c4; --redir:#87878f;
   --crit:#d03b3b; --ser:#c05621; --warn:#9a6700; --ok:#006300; --info:#898781;
   --r:6px; font-size:15px;
 }
@@ -70,7 +71,7 @@ main{padding:14px 16px 90px;max-width:100%}
 .band>.bh{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;font-weight:650;padding:4px 9px;background:#f6f6f4;color:#2c332e;border-left:3px solid var(--faint)}
 .band>.bh .bn{background:rgba(255,255,255,.85);border:1px solid var(--hair);border-radius:4px;padding:0 6px;font-size:11px;color:var(--ink)}
 .band.b-transactional>.bh{background:var(--trans-bg);border-left-color:var(--trans-bg);color:#ffffff}
-.band.b-pillar>.bh{background:var(--pillar-bg);border-left-color:var(--pillar-bg);color:#ffffff}
+.band.b-pillar>.bh{background:var(--pillar-bg);border-left-color:var(--pillar-bg);color:#111327}
 .band.b-fanout>.bh{background:var(--fanout-bg);border-left-color:var(--fanout-bg);color:#111327}
 .band.b-redirect>.bh{background:var(--redir-bg);border-left-color:var(--redir);color:#3c3c42}
 .band .cells{padding:5px}
