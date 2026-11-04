@@ -293,6 +293,7 @@ def main():
         is_r = p in redirects
         cat, tier = classify(p, is_r)
         m = prev_metrics.get(p)
+        if m is not None and m.get('no_metrics'): m = None   # never measured by SEMrush: stays 'new' across rebuilds, not 'zero keywords'
         pflags = []
         if not is_r:
             if p in merge_candidates: pflags.append('consolidate')
