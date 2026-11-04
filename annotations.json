@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T19:48:35.944Z",
+ "updated": "2026-11-04T19:54:07.547Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -1149,6 +1149,27 @@
    "url": "/education-center/guide-to-1031-exchanges/",
    "oldurl": "/education-center/guide-to-1031-exchanges/",
    "lastpub": "2023-11-06"
+  },
+  {
+   "id": "cf1e9320-2be8-4e79-b78e-dcef2d1cda98",
+   "created": "2026-11-04T19:54:07.547Z",
+   "u": "2026-11-04T19:54:07.547Z",
+   "bucket": "sched",
+   "kind": "page",
+   "date": "2026-11-16",
+   "status": "draft",
+   "types": [
+    "rewrite"
+   ],
+   "topic": "Capital gains tax calculator",
+   "kw": "capital gains tax calculator",
+   "vol": 12100,
+   "kd": "",
+   "prompts": "How Can You Reduce or Defer Capital Gains Tax?",
+   "gdoc": "https://docs.google.com/document/d/1UnTNHPsUQU3x0UWD4DYnE1LTAo7ahIcwGuvP6S-5nG8/edit?tab=t.0",
+   "url": "/capital-gains-tax-calculator/",
+   "oldurl": "/capital-gains-tax-calculator/",
+   "lastpub": "2022-04-22"
   }
  ],
  "calDel": [
