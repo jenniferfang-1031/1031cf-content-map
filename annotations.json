@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T19:41:49.058Z",
+ "updated": "2026-11-04T19:48:35.944Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -704,13 +704,13 @@
    "f": {
     "cluster": "2026-11-04T19:37:47.598Z"
    },
+   "updated": "2026-11-04T19:37:47.598Z",
    "status": "",
    "labels": [],
    "target": "",
    "cluster": "Company",
    "tier": "",
-   "offFlags": [],
-   "updated": "2026-11-04T19:37:47.598Z"
+   "offFlags": []
   },
   "/glossary-taxonomy/a-e/": {
    "comments": [],
@@ -718,13 +718,13 @@
    "f": {
     "cluster": "2026-11-04T19:37:53.391Z"
    },
+   "updated": "2026-11-04T19:37:53.391Z",
    "status": "",
    "labels": [],
    "target": "",
    "cluster": "Company",
    "tier": "",
-   "offFlags": [],
-   "updated": "2026-11-04T19:37:53.391Z"
+   "offFlags": []
   },
   "/glossary-taxonomy/f-j/": {
    "comments": [],
@@ -732,13 +732,13 @@
    "f": {
     "cluster": "2026-11-04T19:37:57.781Z"
    },
+   "updated": "2026-11-04T19:37:57.781Z",
    "status": "",
    "labels": [],
    "target": "",
    "cluster": "Company",
    "tier": "",
-   "offFlags": [],
-   "updated": "2026-11-04T19:37:57.781Z"
+   "offFlags": []
   },
   "/glossary-taxonomy/k-o/": {
    "comments": [],
@@ -746,13 +746,13 @@
    "f": {
     "cluster": "2026-11-04T19:38:02.204Z"
    },
+   "updated": "2026-11-04T19:38:02.204Z",
    "status": "",
    "labels": [],
    "target": "",
    "cluster": "Company",
    "tier": "",
-   "offFlags": [],
-   "updated": "2026-11-04T19:38:02.204Z"
+   "offFlags": []
   },
   "/glossary-taxonomy/p-s/": {
    "comments": [],
@@ -760,13 +760,13 @@
    "f": {
     "cluster": "2026-11-04T19:38:05.715Z"
    },
+   "updated": "2026-11-04T19:38:05.715Z",
    "status": "",
    "labels": [],
    "target": "",
    "cluster": "Company",
    "tier": "",
-   "offFlags": [],
-   "updated": "2026-11-04T19:38:05.715Z"
+   "offFlags": []
   },
   "/glossary-taxonomy/t-z/": {
    "comments": [],
@@ -774,13 +774,13 @@
    "f": {
     "cluster": "2026-11-04T19:38:09.973Z"
    },
+   "updated": "2026-11-04T19:38:09.973Z",
    "status": "",
    "labels": [],
    "target": "",
    "cluster": "Company",
    "tier": "",
-   "offFlags": [],
-   "updated": "2026-11-04T19:38:09.973Z"
+   "offFlags": []
   }
  },
  "live": {
@@ -1110,7 +1110,7 @@
   {
    "id": "b9958d70-41dc-47cd-afb6-b93dccbf44c4",
    "created": "2026-11-04T19:41:49.058Z",
-   "u": "2026-11-04T19:41:49.058Z",
+   "u": "2026-11-04T19:42:33.239Z",
    "bucket": "sched",
    "kind": "page",
    "date": "2026-11-04",
@@ -1128,6 +1128,27 @@
    "url": "/education-center/1031-exchange-timeline/",
    "oldurl": "/education-center/dst-1031-exchange/",
    "lastpub": "2022-06-06"
+  },
+  {
+   "id": "c6fb9eda-a5f5-4854-a3b3-e008978c2141",
+   "created": "2026-11-04T19:48:35.943Z",
+   "u": "2026-11-04T19:48:35.943Z",
+   "bucket": "sched",
+   "kind": "page",
+   "date": "2026-09-18",
+   "status": "published",
+   "types": [
+    "rewrite"
+   ],
+   "topic": "1031 exchange basics pillar",
+   "kw": "how does a 1031 exchange work",
+   "vol": 1300,
+   "kd": 41,
+   "prompts": "How Does a 1031 Exchange Work?",
+   "gdoc": "https://docs.google.com/document/d/1zOih9B3IfKejSQE8cPqEiBC6ZEGpOYISacIbhBjkBcQ/edit?tab=t.67zrsccakn1j",
+   "url": "/education-center/guide-to-1031-exchanges/",
+   "oldurl": "/education-center/guide-to-1031-exchanges/",
+   "lastpub": "2023-11-06"
   }
  ],
  "calDel": [
