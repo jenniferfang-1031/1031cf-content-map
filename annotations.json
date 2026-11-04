@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T19:54:07.547Z",
+ "updated": "2026-11-04T19:55:45.173Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -1153,7 +1153,7 @@
   {
    "id": "cf1e9320-2be8-4e79-b78e-dcef2d1cda98",
    "created": "2026-11-04T19:54:07.547Z",
-   "u": "2026-11-04T19:54:07.547Z",
+   "u": "2026-11-04T19:55:05.118Z",
    "bucket": "sched",
    "kind": "page",
    "date": "2026-11-16",
@@ -1164,12 +1164,31 @@
    "topic": "Capital gains tax calculator",
    "kw": "capital gains tax calculator",
    "vol": 12100,
-   "kd": "",
+   "kd": 36,
    "prompts": "How Can You Reduce or Defer Capital Gains Tax?",
    "gdoc": "https://docs.google.com/document/d/1UnTNHPsUQU3x0UWD4DYnE1LTAo7ahIcwGuvP6S-5nG8/edit?tab=t.0",
    "url": "/capital-gains-tax-calculator/",
    "oldurl": "/capital-gains-tax-calculator/",
    "lastpub": "2022-04-22"
+  },
+  {
+   "id": "d7774846-9b32-4858-8b14-345686dc17dc",
+   "created": "2026-11-04T19:55:45.173Z",
+   "u": "2026-11-04T19:55:45.173Z",
+   "bucket": "idea",
+   "kind": "page",
+   "date": "",
+   "status": "",
+   "types": [],
+   "topic": "Multifamily Investing",
+   "kw": "",
+   "vol": "",
+   "kd": "",
+   "prompts": "",
+   "gdoc": "",
+   "url": "",
+   "oldurl": "",
+   "lastpub": ""
   }
  ],
  "calDel": [
