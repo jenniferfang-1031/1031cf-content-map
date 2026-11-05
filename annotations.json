@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-05T23:03:48.592Z",
+ "updated": "2026-11-05T23:05:01.106Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -1201,6 +1201,27 @@
    "url": "",
    "oldurl": "/education-center/multifamily-properties/",
    "lastpub": "2022-08-12"
+  },
+  {
+   "id": "b1dcb79d-fb18-4ee2-8efb-69b953e940ac",
+   "created": "2026-11-05T23:05:01.105Z",
+   "u": "2026-11-05T23:05:01.105Z",
+   "bucket": "sched",
+   "kind": "blog",
+   "date": "2026-11-16",
+   "status": "outline",
+   "types": [
+    "rewrite"
+   ],
+   "topic": "Primary residence",
+   "kw": "",
+   "vol": "",
+   "kd": "",
+   "prompts": "",
+   "gdoc": "",
+   "url": "",
+   "oldurl": "https://www.1031crowdfunding.com/converting-1031-exchange-to-principal-residence/",
+   "lastpub": "2025-08-01"
   }
  ],
  "calDel": [
