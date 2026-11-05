@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-04T19:56:58.327Z",
+ "updated": "2026-11-05T20:32:37.659Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -380,11 +380,11 @@
    "comments": [],
    "delc": [],
    "f": {
-    "status": "2026-08-28T18:27:08.542Z",
+    "status": "2026-11-05T20:32:37.659Z",
     "target": "2026-08-28T18:28:56.575Z"
    },
-   "updated": "2026-08-28T18:28:56.575Z",
-   "status": "published",
+   "updated": "2026-11-05T20:32:37.659Z",
+   "status": "todo",
    "labels": [],
    "target": "how to invest in multifamily real estate",
    "cluster": "",
