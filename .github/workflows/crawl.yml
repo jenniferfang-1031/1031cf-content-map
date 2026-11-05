@@ -1,8 +1,8 @@
 name: Site crawl & rebuild
 on:
   workflow_dispatch: {}        # triggered by the app's Refresh button (or the Run workflow button here)
-  # Daily schedule removed 2026-10-27 at Jennifer's request — restore the block
-  # below once the site host allowlists the crawler User-Agent:
+  # Daily schedule removed 2026-10-27 while the host blocked the crawler; the block
+  # has been lifted (2026-11-04). Uncomment to restore the daily run:
   # schedule:
   #   - cron: '0 13 * * *'     # daily, 6am PT
 concurrency:
@@ -30,5 +30,11 @@ jobs:
             echo "No changes."
           else
             git commit -m "crawl: $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
+            # The app pushes annotations.json / gsc-overlap.json on the same Refresh click,
+            # so main usually moves while the crawl runs. Rebase our one commit on top and
+            # retry a few times; the two sides never touch the same files, so this cannot conflict.
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push rejected (main moved) — retry $i"; sleep 8
+            done
           fi
