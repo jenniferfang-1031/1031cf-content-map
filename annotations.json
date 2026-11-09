@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updated": "2026-11-05T23:12:33.340Z",
+ "updated": "2026-11-09T19:50:14.265Z",
  "author": "Jennifer",
  "statuses": [
   {
@@ -543,17 +543,12 @@
    "offFlags": []
   },
   "/5-year-holding-rule-1031-exchanges/": {
-   "comments": [
-    {
-     "id": "b280eb2e-fa30-4d1b-944a-39d92297be57",
-     "ts": "2026-09-02T19:35:55.229Z",
-     "author": "Jennifer",
-     "text": "Combine with https://www.1031crowdfunding.com/converting-1031-exchange-to-principal-residence/"
-    }
+   "comments": [],
+   "delc": [
+    "b280eb2e-fa30-4d1b-944a-39d92297be57"
    ],
-   "delc": [],
    "f": {},
-   "updated": "2026-09-02T19:35:55.229Z",
+   "updated": "2026-11-05T23:12:41.503Z",
    "status": "",
    "labels": [],
    "target": "",
@@ -1199,7 +1194,7 @@
   {
    "id": "b1dcb79d-fb18-4ee2-8efb-69b953e940ac",
    "created": "2026-11-05T23:05:01.105Z",
-   "u": "2026-11-05T23:05:57.004Z",
+   "u": "2026-11-09T19:50:14.265Z",
    "bucket": "sched",
    "kind": "blog",
    "date": "2026-11-16",
@@ -1208,10 +1203,10 @@
     "rewrite"
    ],
    "topic": "Primary residence",
-   "kw": "",
-   "vol": "",
-   "kd": "",
-   "prompts": "",
+   "kw": "1031 exchange primary residence",
+   "vol": 1300,
+   "kd": 20,
+   "prompts": "Can You Do a 1031 Exchange on a Primary Residence?\nHow Do You Convert a Primary Home Into a 1031 Property?",
    "gdoc": "https://docs.google.com/document/d/19gP9aNLVSvQHmkbeifkmGXnZDwdMWVM7gS_o7n1kvlQ/edit?tab=t.li76zp3xt5ib",
    "url": "",
    "oldurl": "https://www.1031crowdfunding.com/converting-1031-exchange-to-principal-residence/",
